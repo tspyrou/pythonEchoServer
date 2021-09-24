@@ -30,5 +30,8 @@ run_command_locally("ls -l")
 
 
 import subprocess
-ls_output=subprocess.Popen(["sleep", "5"])
-ls_output.communicate()  # Will block for 30 seconds
+#ls_output=subprocess.Popen(["sleep", "5"])
+#ls_output.communicate()  # Will block for 30 seconds
+ls_output=subprocess.Popen(["python3", "./EchoServer.py"])
+run_command_locally("python3 ./EchoClient.py")
+ls_output.communicate()
