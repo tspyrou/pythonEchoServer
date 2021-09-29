@@ -1,4 +1,5 @@
 sudo dockerd
+#ensure user is in unix group docker
 docker build -t precisioninno/echo-demo .
 docker images | grep -i echo
 docker run -p 50007:50007 -it precisioninno/echo-demo EchoServer.py
